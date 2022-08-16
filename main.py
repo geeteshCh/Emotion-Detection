@@ -35,7 +35,8 @@ for i in range(len(res)):
         List.append(res[i - 3])
 
 
-
+# print(List)
+# print("--------------------------------------------------------------------------------------------------------------------")
 
 
 #using Multinomial Naive Bayes algorithm for data matching
@@ -47,6 +48,9 @@ T_f=TfidfTransformer()
 T_f.fit(c_tr)
 
 
+# print(c_tr)
+# print("--------------------------------------------------------------------------------------------------------------------")
+
 
 
 
@@ -54,6 +58,7 @@ T_f.fit(c_tr)
 #using nltk to find the least significant words(last 10% significant words) to remove it later
 stoplist = stopwords.words("english")
 s=list(T_f.idf_)
+print(T_f.idf_)
 s.sort()
 i=math.ceil(0.1*len(s))
 val=s[i]
